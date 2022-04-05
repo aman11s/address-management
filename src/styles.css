@@ -1,0 +1,102 @@
+.App {
+  /* font-family: sans-serif; */
+  text-align: center;
+}
+
+#cover-spin {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  /* display: none; */
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#cover-spin::after {
+  content: "";
+  /* display: block; */
+  position: absolute;
+  left: 48%;
+  top: 40%;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-color: var(--primary-color);
+  border-top-color: transparent;
+  border-width: 4px;
+  border-radius: 50%;
+  -webkit-animation: spin 0.8s linear infinite;
+  animation: spin 0.8s linear infinite;
+}
+
+.form-wrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.address-form {
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  margin: 10% auto;
+  position: relative;
+}
+
+.address-form button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.add-new-address-btn {
+  margin: 1rem auto;
+  cursor: pointer;
+}
+
+.bx-plus-circle {
+  padding-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.address-data {
+  border: 1px solid var(--grey-color);
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.bx-x-circle {
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+}
